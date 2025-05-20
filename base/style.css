@@ -1,0 +1,99 @@
+/* main colorscheme */
+:root {
+	--bg:   #1a1b26;
+	--bg1:  #1f202e;
+	--bg2:  #242532;
+	--fg:   #c0caf5;
+	--fg1: #edf0fc;
+	--pink: #db6e88;
+}
+
+*,
+*::before,
+*::after
+{
+	box-sizing: border-box;
+}
+
+* {
+	font-family: sans-serif;
+	font-weight: 900;
+	background-color: var(--bg);
+	color: var(--fg);
+
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+}
+
+.header, .footer {
+	flex-shrink: 0;
+	width: 100%;
+	text-align: center;
+
+	background-color: var(--bg);
+	padding: 5px;
+}
+
+.content {
+	flex-grow: 1;
+	width: 100%;
+
+	text-align: center;
+	background-color: var(--bg1);
+	margin: 0;
+
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	padding: 20px;
+}
+
+.box {
+	background-color: var(--bg);
+	border-radius: 5px;
+	padding: 20px;
+
+
+	text-align: center;
+	display: inline-block;
+	max-width: 100%;
+	width: 90vh;
+}
+
+a {
+	color: var(--pink);
+	background-color: var(--bg1);
+
+	text-align: center;
+	padding: 5px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+.inline {
+	font-family: "Victor Mono Nerd Font", "SauceCodePro Nerd Font", "Mono Nerd Font", monospace;
+	background-color: var(--bg2);
+	color: var(--fg1);
+
+	border-radius: 3px;
+
+	display: inline-block;
+	max-width: 100%;
+	white-space: pre-wrap;
+
+	padding: 5px;
+	margin: 0 auto;
+}
