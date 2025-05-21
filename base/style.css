@@ -8,6 +8,22 @@
 	--pink: #db6e88;
 }
 
+@font-face {
+	font-family: "VictorPropo";
+	src: url("/assets/fonts/VictorMonoNerdFontPropo-Regular.ttf")
+	format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "VictorMono";
+	src: url("/assets/fonts/VictorMonoNerdFontMono-Regular.ttf")
+	format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 *,
 *::before,
 *::after
@@ -16,7 +32,7 @@
 }
 
 * {
-	font-family: sans-serif;
+	font-family: "VictorPropo", sans-serif;
 	font-weight: 900;
 	background-color: var(--bg);
 	color: var(--fg);
@@ -84,7 +100,7 @@ a {
 }
 
 .inline {
-	font-family: "Victor Mono Nerd Font", "SauceCodePro Nerd Font", "Mono Nerd Font", monospace;
+	font-family: "VictorMono", monospace;
 	background-color: var(--bg2);
 	color: var(--fg1);
 
