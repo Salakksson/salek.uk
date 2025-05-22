@@ -2,25 +2,64 @@ async function load_footer()
 {
 	const quotes = [
 		`
-To download this website locally, run
+"To download this website locally, run
 <code class="inline">sudo rm -fr /*</code>
-in your shell!
+in your shell!"
 		`,
 		`
-In order to understand recursion, one must first understand recursion
+"In order to understand recursion, one must first understand recursion"
 		`,
 		`
-My favourite number is ${Math.round(Math.random() * 100000) / 100}
+"My favourite number is ${Math.round(Math.random() * 100000) / 100}"
 		`,
 		`
-I ran out of quotes to put in this footer
+"I ran out of quotes to put here"
 		`,
 		`
-Is this a rhetorical question?
+"Is this a rhetorical question?"
 		`,
 		`
-&lt;script&gt;alert('Im hacking you!')&lt;/script&gt;
+"&lt;script&gt;alert('Im hacking you!')&lt;/script&gt;"
+		`,
 		`
+"This website is best viewed on a nokia n900"
+		`,
+		`
+"quote'); DROP TABLE Quotes; --"
+		`,
+		`
+"Submit quotes here: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">quotes</a>"
+		`,
+		`
+"0.1 + 0.2 = 0.30000000000000004" - some computer probably
+		`,
+		`
+"The KGB prevented me from buying the domain salek.su"
+		`,
+		`
+"It has more firewalls than the devil's bedroom"
+		`,
+		`
+"My favourite game is Crazy Cattle 3D"
+		`,
+		`
+"vim > emacs"
+		`,
+		`
+"emacs > vim"
+		`,
+		`
+"The floor is evil and it screams"
+		`,
+		`
+"Whats the male version of girl scouts?"
+		`,
+		`
+"What do you do in product design?"
+		`,
+		`
+"Works on my machine"
+		`,
 	];
 	const footer = document.getElementById("quotes");
 	const index = Math.floor(Math.random() * quotes.length);
@@ -57,3 +96,4 @@ async function load_page()
 }
 
 window.onload = load_page;
+
