@@ -1,4 +1,33 @@
-async function loadPage()
+async function load_footer()
+{
+	const quotes = [
+		`
+To download this website locally, run
+<code class="inline">sudo rm -fr /*</code>
+in your shell!
+		`,
+		`
+In order to understand recursion, one must first understand recursion
+		`,
+		`
+My favourite number is ${Math.round(Math.random() * 100000) / 100}
+		`,
+		`
+I ran out of quotes to put in this footer
+		`,
+		`
+Is this a rhetorical question?
+		`,
+		`
+&lt;script&gt;alert('Im hacking you!')&lt;/script&gt;
+		`
+	];
+	const footer = document.getElementById("quotes");
+	const index = Math.floor(Math.random() * quotes.length);
+	footer.innerHTML = quotes[index];
+}
+
+async function load_page()
 {
 	const base = document.getElementById("template");
 	if (!base)
@@ -17,8 +46,14 @@ async function loadPage()
 		return;
 	}
 
+	const canvas = document.createElement("canvas");
+	canvas.id = "bg";
+	target.appendChild(canvas);
+
 	const content = await (await fetch("./content.html")).text();
-	target.innerHTML = content;
+	target.insertAdjacentHTML("beforeend", content);
+
+	load_footer();
 }
 
-window.onload = loadPage;
+window.onload = load_page;
