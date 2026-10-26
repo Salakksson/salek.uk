@@ -23,7 +23,7 @@ in your shell!"
 		`,
 		`
 "This website is best viewed on a nokia n900"
-		`,
+		`, // Context: A friend ran postmarketos on a nokia n900
 		`
 "quote'); DROP TABLE Quotes; --"
 		`,
@@ -35,13 +35,14 @@ in your shell!"
 		`,
 		`
 "The KGB prevented me from buying the domain salek.su"
-		`,
+		`, // Context: I didnt wanna send ID documents to the russian govenment to register a .su domain
 		`
 "It has more firewalls than the devil's bedroom"
-		`,
+		`, // Context: In prison break season 4 the hacker guy said this about something related to Scylla,
+		   // I still dont know how these kind of things get past review
 		`
 "My favourite game is Crazy Cattle 3D"
-		`,
+		`, // Context: A browser game me and some friends played on the train home from college a few times, none of us ever beat it
 		`
 "vim > emacs"
 		`,
@@ -50,13 +51,16 @@ in your shell!"
 		`,
 		`
 "The floor is evil and it screams"
-		`,
+		`, // Context: The name of a game my friend jude proposed during a game jam: "Game Idea: The Floor is Evil and it Screams
+		       // scary guy hunting you in the dark or sum shit
+		       // if step on creaky floor board, it creaks loudly and hunter uses A* to find you for 10 secs
+		       // have to find objects around the house (to keep you moving)"
 		`
 "Whats the male version of girl scouts?"
-		`,
+		`, // Context: I genuinely asked this question to a friend (the answer is obviously boy scouts)
 		`
 "What do you do in product design?"
-		`,
+		`, // Context: I also asked this question to a friend (although the answer i was looking for was more specific than "I design products")
 		`
 "Works on my machine"
 		`,
@@ -66,6 +70,7 @@ in your shell!"
 	footer.innerHTML = quotes[index];
 }
 
+// Note for anyone looking at this: im aware this is really stupid but it was the cleanest solution at the time
 async function load_page()
 {
 	const base = document.getElementById("template");
